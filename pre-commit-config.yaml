@@ -1,0 +1,10 @@
+ - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v2.4.1
+    hooks:
+      - id: mypy
+        additional_dependencies: &mypy_deps [numpy, pandas-stubs, types-requests, types-PyYAML, types-setuptools]
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.9.1
+    hooks:
+      - id: nbqa-mypy
+        additional_dependencies: [mypy==2.4.1, numpy, pandas-stubs, types-requests, types-PyYAML, types-setuptools]
